@@ -1,18 +1,39 @@
 /// <reference types="cypress" />
 
 import * as indexfuncs from '../pages/indexPage'
-import * as indexfuncs from '../pages/dashboardPage'
+import * as dashboardfuncs from '../pages/dashboardPage'
+import * as roomfuncs from '../pages/roomPage'
+import * as clientfuncs from '../pages/clientPage'
+import * as targets from '../targets/targets'
 
+   describe('Test suite', function(){
 
- describe('Test suite', function(){
+    
 
     beforeEach(()=> {
-        cy.visit('http://localhost:3000/login')
-        indexfuncs.checkheadOfIndexPage(cy)
- 
+        cy.visit(targets.base_url)
+        indexfuncs.checkTitleOfIndexPage(cy)
+
+        indexfuncs.performValidLogin(cy, targets.username , targets.password)
+        dashboardfuncs.checktextofdashboardPage(cy)
+    
     })
-    it ( 'Perform login', function() {
-        indexfuncs.performValidLogin(cy, 'tester01' , 'GteteqbQQgSr88SwNExUQv2ydb7xuf8c' ,)
-        indexfuncs.checktextofdashboardPage(cy)
+      afterEach(()=> {
+         dashboardfuncs.performLogout(cy)
+    })  
+
+
+    it ('Perform login', function() {
+      //  indexfuncs.performValidLogin(cy, targets.username , targets.password)
+        // dashboardfuncs.checktextofdashboardPage(cy)
     })
-})
+
+    it ('performValidbookaroom', function() {
+        roomfuncs.performValidbookaroom(cy,'')
+        // dashboardfuncs.checktextofdashboardPage(cy)
+  })
+ it ('shouldckeckonaclient', function() {
+    clientfuncs.shouldckeckonaclient(cy, '')
+
+ })
+ })

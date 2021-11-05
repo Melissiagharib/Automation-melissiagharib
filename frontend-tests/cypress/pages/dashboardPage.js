@@ -1,20 +1,28 @@
- /// <reference types="cypress" />
+ 
+/// <reference types="cypress" />
 
  const Logouttextfile = 'Logout'
  const Roomtextfile = 'Room'
-
+ const logoutButton= '.user > .btn'
 
  function checktextofdashboardPage (cy){
-    cy.head().should ('eq , Logouttextfile')
+   cy.contains('#app > header > div > div > button', Logouttextfile)
 }
 
-function checktextofdashboardPage (cy){
-    cy.head().should ('eq , Roomtextfile')
-
+ function textofdashboardPage (cy){
+    cy.head().should ('eq', Roomtextfile)
+ 
 
 }
- module.exports = {
-    Logouttextfile ,
-    Roomtextfile 
+  function performLogout(cy){
+      cy.get(logoutButton).click()
+    //  cy.contains()
+ 
+}
+  module.exports = {
+    checktextofdashboardPage ,
+    textofdashboardPage,
+    performLogout
+   
 
   }
