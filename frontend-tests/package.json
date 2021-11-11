@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open" : "cypress open",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --reporter mochawesome",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^8.7.0"
+    "cypress": "^8.7.0",
+    "mochawesome-merge": "^4.2.0"
+  },
+  "dependencies": {
+    "mochawesome": "^7.0.0"
   }
 }

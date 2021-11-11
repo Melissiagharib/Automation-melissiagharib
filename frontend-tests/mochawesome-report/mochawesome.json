@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-11T18:05:31.810Z",
+    "end": "2021-11-11T18:05:40.491Z",
+    "duration": 8681,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1cb885c9-be4a-45c6-97af-c5f2855fef1a",
+      "title": "",
+      "fullFile": "cypress/integration/regression-test-suite.spec.js",
+      "file": "cypress/integration/regression-test-suite.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c0d935ab-1109-48b4-af97-6753da5e8acc",
+          "title": "Regression test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "perform valid login",
+              "fullTitle": "Regression test suite perform valid login",
+              "timedOut": null,
+              "duration": 2995,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/login');\ncy.contains('Login');\ncy.get(\":nth-child(1) > input\").type(\"tester01\");\ncy.get(\":nth-child(2) > input\").type(\"GteteqbQQgSr88SwNExUQv2ydb7xuf8c\");",
+              "err": {},
+              "uuid": "45b3b5ce-2f2d-414e-bad4-720a8355c176",
+              "parentUUID": "c0d935ab-1109-48b4-af97-6753da5e8acc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "See the right information",
+              "fullTitle": "Regression test suite See the right information",
+              "timedOut": null,
+              "duration": 1525,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".btn\").click();\ncy.contains('Logout');\ncy.contains('Rooms');",
+              "err": {},
+              "uuid": "43bbe8d8-4b37-4304-b192-50272e11390b",
+              "parentUUID": "c0d935ab-1109-48b4-af97-6753da5e8acc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "perform valid book a room",
+              "fullTitle": "Regression test suite perform valid book a room",
+              "timedOut": null,
+              "duration": 174,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\":nth-child(1) > .btn\").click;\ncy.get(\":nth-child(3) > .btn\").click;",
+              "err": {},
+              "uuid": "b5a5a32f-0327-4827-b4c8-a913eaaa355d",
+              "parentUUID": "c0d935ab-1109-48b4-af97-6753da5e8acc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should ckeck on a client",
+              "fullTitle": "Regression test suite should ckeck on a client",
+              "timedOut": null,
+              "duration": 480,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.blocks > :nth-child(2) > .btn').click();",
+              "err": {},
+              "uuid": "70cb20ab-4c21-4063-aa18-e2ab296c10f0",
+              "parentUUID": "c0d935ab-1109-48b4-af97-6753da5e8acc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create a client",
+              "fullTitle": "Regression test suite create a client",
+              "timedOut": null,
+              "duration": 292,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('h2 > .btn').click;",
+              "err": {},
+              "uuid": "2cbf86f3-c66b-4ff3-85f3-a75c70436af2",
+              "parentUUID": "c0d935ab-1109-48b4-af97-6753da5e8acc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "45b3b5ce-2f2d-414e-bad4-720a8355c176",
+            "43bbe8d8-4b37-4304-b192-50272e11390b",
+            "b5a5a32f-0327-4827-b4c8-a913eaaa355d",
+            "70cb20ab-4c21-4063-aa18-e2ab296c10f0",
+            "2cbf86f3-c66b-4ff3-85f3-a75c70436af2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5466,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.0"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.0.0"
+    }
+  }
+}
